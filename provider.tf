@@ -10,6 +10,6 @@ terraform {
 provider "panos" {
   hostname = "20.70.176.36"
   username = "admin"
-  password = "Bluebicycle1!"
+  password = ""
   skip_verify_certificate = true
 }
