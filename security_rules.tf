@@ -2,13 +2,13 @@
 resource "panos_security_policy" "allow_web_access" {
   location = {
     device_group = {
-      name = panos_device_group.my_device_group.name
+      name = panos_device_group.device_group.name
     }
   }
   rules = [
     {
       # rule_type           = "intrazone",
-      name                  = "rule-1",
+      name                  = "${var.unique_prepend}-rule-1",
       source_zones          = ["any"],
       source_addresses      = ["any"],
       destination_zones     = ["any"],
